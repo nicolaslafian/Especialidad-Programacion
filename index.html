@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidad de Programacion</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fa;
+            color: #303b46;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            border-bottom: 1px solid #dce2e8;
+        }
+
+        .barra {
+            max-width: 1080px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #24496b;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .portada {
+            background-color: #eaf0f5;
+            border-bottom: 1px solid #dce2e8;
+        }
+
+        .portada-contenido {
+            max-width: 1080px;
+            margin: auto;
+            padding: 50px 24px;
+        }
+
+        h1 {
+            color: #24496b;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+        }
+
+        .portada p {
+            max-width: 780px;
+            font-size: 1.05rem;
+        }
+
+        main {
+            max-width: 1080px;
+            margin: auto;
+            padding: 38px 24px;
+        }
+
+        section {
+            margin-bottom: 38px;
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            color: #24496b;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .columnas {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .proyectos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: start;
+            gap: 22px;
+        }
+
+        .tarjeta {
+            background: white;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            overflow: hidden;
+            min-width: 0;
+        }
+
+        .imagen-contenedor {
+            min-height: 180px;
+            padding: 18px;
+            background-color: #eef2f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagen-contenedor img {
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            max-height: 230px;
+            object-fit: contain;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        .marcador-imagen {
+            width: 100%;
+            min-height: 145px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #596777;
+            border: 1px dashed #aab7c5;
+            border-radius: 6px;
+            padding: 20px;
+            background-color: #f8fafc;
+        }
+
+        .tarjeta-contenido {
+            padding: 20px;
+        }
+
+        .tarjeta h3 {
+            color: #24496b;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            overflow-wrap: anywhere;
+        }
+
+        .enlace {
+            display: inline-block;
+            margin-top: 10px;
+            color: #245d91;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background-color: #edf1f5;
+            border-top: 1px solid #dce2e8;
+            color: #536171;
+        }
+
+        @media (max-width: 760px) {
+            .barra {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .columnas {
+                grid-template-columns: 1fr;
+            }
+
+            .proyectos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 520px) {
+            .barra {
+                padding: 15px 18px;
+            }
+
+            .portada-contenido {
+                padding: 38px 18px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 28px 18px;
+            }
+
+            .proyectos {
+                grid-template-columns: 1fr;
+            }
+
+            .panel {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="barra">
+            <div class="logo">Especialidad de Programación</div>
+        </div>
+    </header>
+
+    <section class="portada" id="inicio">
+        <div class="portada-contenido">
+            <h1>Programacion</h1>
+
+            <p>
+                En esta especialidad nos enseñan la Programacion
+                Orientada a Objetos (POO), tambien la creacion de
+                paginas web con HTML, CSS y JavaScript, los fundamentos
+                de la programacion, mantencion de los ordenadores tanto
+                hardware como software.
+            </p>
+        </div>
+    </section>
+
+    <main>
+
+        <div class="columnas">
+
+            <section class="panel" id="habilidades">
+                <h2>Habilidades que desarrollamos</h2>
+
+                <p>Nosotros a lo largo desarrollamos:</p>
+
+                <ul>
+                    <li>La programacion orientada a objetos.</li>
+                    <li>Creacion de paginas web.</li>
+                    <li>Mantencion del equipo.</li>
+                    <li>Resolucion de problemas mediante la programacion.</li>
+                    <li>Creacion de proyectos desde cero.</li>
+                </ul>
+            </section>
+
+            <section class="panel" id="proyectos">
+                <h2>Proyectos desarrollados durante nuestra formacion</h2>
+
+                <ul>
+                    <li>El proyecto de la semana ABG (Simulador de catastrofes en Godot).</li>
+                    <li>Mejorar el PISE de la pagina del colegio.</li>
+                    <li>Aprender a crear paginas web.</li>
+                    <li>Creacion de programas utilizando Python.</li>
+                    <li>Creacion de un juego con Python.</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <section id="ejemplos">
+            <h2>Imagenes de ejemplos de los proyectos realizados</h2>
+
+            <div class="proyectos">
+
+                <article class="tarjeta">
+
+                    <div class="imagen-contenedor">
+                        <img
+                            src="Gustabo-frike.png"
+                            alt="Pagina web con JavaScript">
+                    </div>
+
+                    <div class="tarjeta-contenido">
+                        <p>
+                            En esta imagen se ve la creacion de una
+                            pagina web con JavaScript que permite
+                            interactuar con esta misma.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <div class="imagen-contenedor">
+                        <img
+                            src="reg-escolar.png"
+                            alt="Sistema educativo hecho en Python">
+                    </div>
+
+                    <div class="tarjeta-contenido">
+                        <p>
+                            Aqui hay un sistema educativo hecho en
+                            Python, te permite registrar y mostrar
+                            estudiantes.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="tarjeta" id="repositorio">
+
+                    <div class="tarjeta-contenido">
+                        <h3>Sistema de gestion de turnos medicos</h3>
+
+                        <p>
+                            Repositorio de ejemplo de sistema de
+                            gestion de turnos medicos.
+                        </p>
+
+                        <a
+                            class="enlace"
+                            href="https://github.com/nicolaslafian/Kiwi"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            https://github.com/nicolaslafian/Kiwi
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Programacion</p>
+    </footer>
+
+</body>
+</html>
